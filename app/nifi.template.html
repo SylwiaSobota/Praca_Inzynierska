@@ -1,0 +1,35 @@
+<!--
+			 <div style="margin-left:25%;padding:1px 1px;height:10;">
+-->
+<script>
+function Usun(uri, ver)
+{
+	console.log(uri);
+	console.log(ver);
+}
+</script>
+			
+			<a href="" onclick="Usun(x.uri, x.revision.version)">Usuń</a>		
+			<table>
+			
+			
+			<tr><td>Nazwa:</td><td>{{x.component.name}}</td></tr>
+            <tr><td>Id:</td><td> {{x.component.id}}</td></tr>
+            <tr><td>Id Rodzica:</td><td> {{x.component.parentGroupId}}</td></tr>
+            <tr><td>Stan :</td><td> {{x.component.state}}</td></tr>
+			</table>
+			<h4>Dane o statusie </h4></center>
+			<table>
+            <tr><td>Status uruchomienia: </td><td>{{x.status.aggregateSnapshot.runStatus}}</td></tr>
+            <tr><td>Bajty odczytane: </td><td>{{x.status.aggregateSnapshot.read}}</td></tr>
+            <tr><td>Bajty zapisane: </td><td> {{x.status.aggregateSnapshot.written}}</td></tr>
+            <tr><td>Input:</td><td>{{x.status.aggregateSnapshot.input}}</td></tr>
+			<tr><td>Output:</td><td> {{x.status.aggregateSnapshot.output}}</td></tr>
+            <tr><td>Flow file IN: </td><td>{{x.status.aggregateSnapshot.flowFilesIn}}</td></tr>
+            <tr><td>Flow file OUT: </td><td>{{x.status.aggregateSnapshot.flowFilesOut}}</td></tr>
+			<tr><td>Liczba tasków: </td><td>{{x.status.aggregateSnapshot.tasks}}</td></tr>
+            <tr><td>Łączny czas trwania tasków: </td><td>{{x.status.aggregateSnapshot.tasksDuration}}</td></tr>
+            <tr><td>Liczba wątków aktualnie wykonywanych: </td><td>{{x.status.aggregateSnapshot.activeThreadCount}}</td></tr>
+			</table>
+			
+		<!--	</div>-->
