@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="nifiApp">
+<head>
+<meta charset="utf-8">
+<style type="text/css" media="all">
+             @import "app.css";
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+<script src="app.js"></script>
+<script src="nifi.component.js"></script>
+<script src="dodajGrupy.js"></script>
+<script src="dodajInput.js"></script>
+<script src="dodajOutput.js"></script>
+<script src="dodajProcesor.js"></script>
+<script src="usun.js"></script>
+<script src="run.js"></script>
+
+
+
+</head>
+<body>
+<div style="margin-left:25%;padding:1px 1px;height:0;">
+<h1>UI dla NiFi</h1>
+<nifi></nifi>
+</div>
+
+
+
+<div ng-controller="dodajProcesorCtrl"><li><a class = "active" href=''><button ng-click="Utworz()">+</button><b>Procesory</b></a></li>
+<script>lista(procesory);</script></div>
+<div ng-controller="dodajGrupyCtrl"><li><a class = "active" href=''><button ng-click="Utworz()">+</button><b>Grupy procesorów</b></a></li>
+<script>
+lista(grupy);</script>
+</div>
+<div ng-controller="dodajInputCtrl"><li><a class = "active" href=''><button ng-click="Utworz()">+</button><b>Porty wejścia</b></a></li>
+<script>
+lista(input);</script></div>
+<div ng-controller="dodajOutputCtrl"><li><a class = "active" href=''><button ng-click="Utworz()">+</button><b>Porty wyjścia</b></a></li>
+<script>
+lista(output);</script>
+</div>
+
+<div><li><a class = "active" href=''><button>+</button><b>Połączenia</b></a></li>
+<script>
+polaczenia(grupy);</script>
+</div>
+
+
+
+
+</body>
+</html>
